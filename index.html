@@ -6,48 +6,109 @@
 
 
 
-    <title>Document</title>
+    <title>文件上传</title>
 
 
     <script src="js/bootstrap.bundle.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/vue.global.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.css">
+
 </head>
 <body>
 
     <div class="container-lg p-5 my-5 border">
+
         <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">
-                            视频文件上传转换
-                        </h5>
-                    </div>
-
-                  生成多个文件上传框，并且要在每个右侧添加上传、删除按钮，要求使用bootstrap4实现，给出代码：
-                  <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="input-group mb-3">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile01">
-                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-
-
-
-
-                </div>
+            <div class="col-lg-12">
+                <h4 class="display-4 text-center">视频文件上传</h4>
             </div>
         </div>
+
+        <div class="row bg-light text-white ">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+
+                <div class="btn-group my-2 d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary">新增上传框</button>
+                    <button type="button" class="btn btn-secondary">删除上传框</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row my-2">
+            <div class="col-lg-12 ">
+
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <form>
+                            <!-- 文件上传组件开始 -->
+                            <div class="input-group mb-3">
+                                <!-- 自定义文件输入框开始 -->
+                                <div class="custom-file">
+                                    <!-- 文件输入框，与label标签通过for属性关联 -->
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01" >
+                                    <!-- 文件输入框的标签，用于提示用户选择文件 -->
+                                    <label class="custom-file-label" for="inputGroupFile01">选择文件</label>
+                                </div><!-- 自定义文件输入框结束 -->
+
+                                <!-- 输入框附加组件开始，可用于放置按钮或图标 -->
+                                <div class="input-group-append ml-3">
+                                        <button class="btn btn-primary mx-1" type="button">上传</button>
+                                        <button class="btn btn-danger mx-1" type="button">清除</button>
+                                </div><!-- 输入框附加组件结束 -->
+
+
+
+                            </div>
+                            <!-- 文件上传组件结束 -->
+
+
+
+
+                        </form>
+
+
+
+
+
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+
+
+    <div class="row">
+        <div class="col-lg-12 my-5">
+            <hr class="my-4">
+            <h5>功能说明：</h5>
+            <p class="my-2">
+            <abbr>1 创建一个页面，分为上下两个部分 上个部分用于上传文件，下个部分用于显示 转换结果
+                2   上半部分包含文件上传功能、
+                上传文件框默认3个，可通过按钮天添加，最多允许添加10个
+                上传框检查文件类型，必须是视频类、音频
+                上传框检查文件大小，不能超过500M
+                每个上传框 最右侧有 “上传”按钮 、转换按钮
+                每个上传框下方有显示上传进度的 进度条
+                上传完成后，转换按钮 由灰色变为绿色
+
+                页面下半部分要求
+                点击了绿色的 转换按钮后， 后台接口（Python程序）会转换文件为指定格式，并存储到指定路径 /opt/media
+                点击了绿色的 转换按钮后，上传框变为灰色，不可以修改。
+                页面下半部分列表显示转换好的文件 ，并且每行右侧增加 下载 和 删除按钮，</abbr>
+            </p>
+        </div>
+    </div>
+
+
     </div>
 </body>
 </html>
